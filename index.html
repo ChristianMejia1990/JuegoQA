@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Juego del Lobo la Cabra y la Col</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <div id="contenedorPrincipal" class="container bg-white">
+    <main class="row pt-3 justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h1 class="text-center titulo">Cazadores de Sombras</h1><br>
+        <p class="subtitulo">Hace mucho tiempo un granjero fue al mercado y compró un lobo, una cabra y una col. Para volver a su casa tenía que cruzar un río. El granjero dispone de una barca para cruzar a la otra orilla, pero en la barca solo caben él y una de sus compras. Si el lobo se queda solo con la cabra se la come, si la cabra se queda sola con la col se la come. El reto del granjero era cruzar él mismo y dejar sus compras a la otra orilla del río, dejando cada compra intacta. ¿Cómo lo hizo?</p>
+      </div>
+    </main>
+    <div class="row px-3 justify-content-center">
+      <div class="col-12 text-center pb-3">
+        <img id="farmer" src="img/farmer.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <form action="iniciar.html" method="post">
+          <div class="form-group">
+            <label for="nombre"><b>Ingresa tu nombre:</b></label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresa tu nick" required oninput="habilitarBoton()">
+          </div>
+          <button type="submit" class="btn btn-block boton" id="botonJugar" disabled>Jugar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function habilitarBoton() {
+      var nombre = document.getElementById('nombre').value;
+      var botonJugar = document.getElementById('botonJugar');
+
+      if (nombre.trim() !== '') {
+        botonJugar.removeAttribute('disabled');
+        // Almacenar el nombre en localStorage
+        localStorage.setItem('nombreUsuario', nombre);
+      } else {
+        botonJugar.setAttribute('disabled', 'true');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Iniciar Juego</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <!-- Enlazar Font Awesome desde un CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+  <div id="contenedorPrincipal" class="container bg-white">
+    <br> 
+	<div id="star-rating-container"></div>
+    <h1 class="text-center titulo" id="mensajeBienvenida"></h1>
+    <div class="row p-2 justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6"></div>
+    </div>
+    <div class="row px-3 justify-content-center">
+      <div class="col">
+        <div class="row">
+          <!-- opciones de la izquierda -->
+          <div class="col-4">
+            <div class="row">
+              <div id="contenedorNombre1" class="col-12 text-center p-2">
+                <h5 id="nombre1"></h5>
+                <img id="imgOpcion1" src="img/wolf.png" alt="" class="img-fluid">
+              </div>
+              <div id="contenedorNombre2" class="col-12 text-center p-2">
+                <h5 id="nombre2"></h5>
+                <img id="imgOpcion2" src="img/goat.png" alt="" class="img-fluid">
+              </div>
+              <div id="contenedorNombre3" class="col-12 text-center p-2">
+                <h5 id="nombre3"></h5>
+                <img id="imgOpcion3" src="img/plant.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- rio -->
+          <div class="col-4 align-self-center text-center">
+            <div id="temporizador">Tiempo restante: <span id="tiempoRestante">60</span> seg</div>
+            <p id="intentos" class="text-center">Interacciones: 0</p>
+          </div>
+          <!-- opciones de la derecha -->
+          <div class="col-4">
+            <div class="row">
+              <div id="contenedorNombre4" class="col-12 text-center p-2">
+                <h5 id="nombre4"></h5>
+                <img id="imgOpcion4" src="img/cajita.png" alt="" class="img-fluid">
+              </div>
+              <div id="contenedorNombre5" class="col-12 text-center p-2">
+                <h5 id="nombre5"></h5>
+                <img id="imgOpcion5" src="img/cajita.png" alt="" class="img-fluid">
+              </div>
+              <div id="contenedorNombre6" class="col-12 text-center p-2">
+                <h5 id="nombre6"></h5>
+                <img id="imgOpcion6" src="img/cajita.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- opciones de juego -->
+          <div class="col-12 p-1">
+            <div class="row justify-content-center py-2">
+              <div id="contenedorBotonIniciar" class="col-12 col-sm-6">
+                <h1 id="mensaje" class="text-center titulo"></h1>
+                <p id="mensaje2" class="text-center"></p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div id="contenedorPreguntas" class="col-12 col-sm-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Recuperar el nombre almacenado en localStorage
+    var nombreUsuario = localStorage.getItem('nombreUsuario');
+    if (nombreUsuario) {
+      // Mostrar un mensaje de bienvenida con el nombre recuperado
+      document.getElementById('mensajeBienvenida').innerText = "¡Hola, " + nombreUsuario + "!  \n¡Comencemos a Cazar!";
+    }
+  </script>
+</body>
+
+</html>

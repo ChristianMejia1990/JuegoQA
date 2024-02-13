@@ -1,0 +1,119 @@
+body{
+  background-color: #B0C4DE;
+  padding: 0;
+  margin: 0;
+}
+#contenedorPrincipal {
+ background-image: url('../img/sea.png');
+
+  background-size: cover; /* Para cubrir todo el fondo del contenedor */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat; /* Para evitar la repetición de la imagen */
+  height: 100vh; /* Ajusta la altura del contenedor según sea necesario */
+}
+
+#mensaje2 {
+ text-align: center;
+ color: white;
+ font-size:2em;
+ }
+
+
+#intentos
+{
+  color: white;
+  font-size: 30PX;
+  font-weight:bold;
+}
+
+#temporizador {
+  color: white;
+  font-size: 30PX;
+  font-weight:bold;
+}
+
+/* En tu archivo de estilos o en una etiqueta <style> dentro del HTML */
+.img-level {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: auto; /* Mantén la proporción de aspecto original */
+  display: inline-block; /* Para que las estrellas aparezcan en la misma línea */
+  margin-right: 10px; /* Puedes ajustar el margen según sea necesario */
+}
+
+
+/* Agrega estilos CSS para el contenedor de calificación de estrellas */
+#star-rating-container {
+  color: gold; /* Cambia el color de las estrellas a dorado */
+  font-size: 30px; /* Ajusta el tamaño de las estrellas */
+}
+
+/* Estilos adicionales para personalizar las estrellas */
+#star-rating-container .fa-star {
+  color: gold; /* Cambia el color de las estrellas individuales */
+}
+
+#star-rating-container .fa-star-o {
+  color: lightgray; /* Cambia el color de las estrellas vacías */
+}
+
+.titulo{
+  color: #092834;
+}
+.subtitulo{
+  color: black;
+  opacity: 4.6;
+  text-align:justify;
+  font-weight:bold;
+}
+.boton{
+  background-color: #004085;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 2px solid #3498db;
+  padding:6px;
+  
+
+}
+.boton:hover{
+  background-color: rgb(70,130,180);
+}
+.footer-icons a {
+  color: #B0C4DE !important;
+}
+
+/* Estilos para los íconos de redes sociales en el footer */
+.social-icon {
+  color: #fff;
+  font-size: 24px;  
+  margin: 0 3px;  
+  background-color: #333;  
+  padding-right:3%;
+  border-radius: 50%;  
+  text-align:right;
+}
+
+.h5, h5{
+font-size: 1.25rem;
+color: white;	
+	
+}
+
+/* dispositivo md */
+@media screen and (max-width:767px){}
+/* dispositivo sm */
+@media screen and (max-width:575px){
+  .titulo{
+    font-size: 30px;
+  }
+  .subtitulo{
+    font-size: 18px;
+  }
+  #farmer{
+    width: 150px;
+  }
+  #imgOpcion1,#imgOpcion2,#imgOpcion3,#imgOpcion4,#imgOpcion5,#imgOpcion6{
+    width: 70px;
+  }
+}
